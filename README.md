@@ -89,9 +89,18 @@ processed and cleaned to get our final dataset.
 4. Coding for the choropleth map – Jesse
 5. Rendering the HTML using Flask – Jessica and Isha 
 6. Project Presentation  – All the team members 
+
+----------------------------------------------------------------------------------------------------------------------------
+
+### Data Cleaning
+Irrelevant columns were dropped and remaining columns renamed to formalise across all five datasets
+A "Year" column was added for each dataset as well as a "Region" column for those that were missing
+Title method was used to formalise all capitalisation for Country and Region columns across all datasets
+Lamda function then assigned region values by referencing an existing region column
+Five dataframes were then concatenated
+Removed any country values that did not feature in each of the five datasets
+Exported to csv for use with our plots
+grouped by country and applied mean function
+Exported a second csv file for use with our map visualisation
+
  -----------------------------------------------------------------------------------
-
-
-
-
-
