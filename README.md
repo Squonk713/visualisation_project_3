@@ -81,7 +81,7 @@ processed and cleaned to get our final dataset.
  
 ----------------------------------------------------------------------------------------------------------------------------
 
-## Task Breakdown
+### Task Breakdown
 
 1. Data cleaning and processing in Pandas - Jesse
 2. Database creation in SQL – Isha
