@@ -13,6 +13,7 @@ CREATE TABLE "global_happiness_data" (
 );
 
 CREATE TABLE "global_happiness_mean_values" (
+    "country" VARCHAR   NOT NULL,
     "overall_rank" FLOAT   NOT NULL,
     "happiness_score" FLOAT   NOT NULL,
     "gdp_per_capita" FLOAT   NOT NULL,
