@@ -13,7 +13,7 @@
 
 ## <a id="dataset-header"></a>Dataset
 
-We used the [World Happiness Report](https://www.kaggle.com/unsdsn/world-happiness)\
+We used the [World Happiness Report Dataset](https://www.kaggle.com/unsdsn/world-happiness)\
 Available from [Kaggle.com](https://www.kaggle.com)
 
 There are 5 CSV files in this data set. 
@@ -23,6 +23,9 @@ There are 5 CSV files in this data set.
 * 2017.csv
 * 2018.csv
 * 2019.csv
+
+CSV files are placed in the [Project Data](Project Data/):
+
 
 
 ## <a id="project-header"></a>Project Outline
