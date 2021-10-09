@@ -1,9 +1,31 @@
-## World Happiness Report- An Analysis 
-------------------------------------------------------
-### A Project By:
-### Jessica Uppal, Jesse Edwards and Isha Singh
+﻿## World Happiness Report- An Analysis 
 
-### Project Outline
+
+![Title Image](Images/README_image.jpg)
+
+------------------------------------------------------
+## Contents
+
+* [Dataset](#dataset-header)
+* [Project Outline](#project-header)
+* [Collaborators](#team-header)
+
+
+## <a id="dataset-header"></a>Dataset
+
+We used the [World Happiness Report](https://www.kaggle.com/unsdsn/world-happiness)\
+Available from [Kaggle.com](https://www.kaggle.com)
+
+There are 5 CSV files in this data set. 
+
+* 2015.csv
+* 2016.csv
+* 2017.csv
+* 2018.csv
+* 2019.csv
+
+
+## <a id="project-header"></a>Project Outline
 
 Using the “World Happiness Report” dataset, we will be analysing the relationship between the perceived happiness of a country’s citizens, 
 the country’s GDP, and the average life expectancy.
@@ -104,3 +126,10 @@ grouped by country and applied mean function
 Exported a second csv file for use with our map visualisation
 
  -----------------------------------------------------------------------------------
+
+## <a id="team-header"></a>Collaborators
+
+* [Isha Singh](https://github.com/isha167)
+* [Jesse Edwards](https://github.com/Squonk713)
+* [Jessica Uppal](https://github.com/JessicaUppal)
+
