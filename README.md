@@ -16,7 +16,7 @@
 We used the [World Happiness Report Dataset](https://www.kaggle.com/unsdsn/world-happiness)\
 Available from [Kaggle.com](https://www.kaggle.com)
 
-There are 5 CSV files in this data set. 
+There are 5 CSV files in this data set: 
 
 * [2015.csv](https://www.kaggle.com/unsdsn/world-happiness?select=2015.csv)
 * [2016.csv](https://www.kaggle.com/unsdsn/world-happiness?select=2016.csv)
@@ -24,8 +24,17 @@ There are 5 CSV files in this data set.
 * [2018.csv](https://www.kaggle.com/unsdsn/world-happiness?select=2018.csv)
 * [2019.csv](https://www.kaggle.com/unsdsn/world-happiness?select=2019.csv)
 
-CSV files are placed in the Project Data folder:
+CSV files are placed in the Project Data folder.
 
+### Data Cleaning
+Column headings were renamed to formalise across all five datasets.
+A "Year" column was added for each dataset, as well as a "Region" column in the CSV files that it was missing.
+The title method was used to formalise all capitalisation for “Country” and “Region” columns across all datasets.
+The Lamda function was applied to assign region values by referencing an existing region column.
+The five dataframes were then concatenated to form one csv.
+Any country values that did not feature in each of the five datasets were dropped.
+The final CSV was exported for use with our plots. The dataset was grouped by country and the mean function applied. 
+A second CSV file was exported for use with our map visualisations.
 
 
 ## <a id="project-header"></a>Project Outline
@@ -98,19 +107,6 @@ Selector = Country
 6. Project Presentation  – All the team members 
 
 ----------------------------------------------------------------------------------------------------------------------------
-
-### Data Cleaning
-Irrelevant columns were dropped and remaining columns renamed to formalise across all five datasets
-A "Year" column was added for each dataset as well as a "Region" column for those that were missing
-Title method was used to formalise all capitalisation for Country and Region columns across all datasets
-Lamda function then assigned region values by referencing an existing region column
-Five dataframes were then concatenated
-Removed any country values that did not feature in each of the five datasets
-Exported to csv for use with our plots
-grouped by country and applied mean function
-Exported a second csv file for use with our map visualisation
-
- -----------------------------------------------------------------------------------
 
 ## <a id="team-header"></a>Collaborators
 
