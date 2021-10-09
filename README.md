@@ -24,7 +24,7 @@ There are 5 CSV files in this data set.
 * 2018.csv
 * 2019.csv
 
-CSV files are placed in the [Project Data](Project Data/):
+CSV files are placed in the Project Data folder:
 
 
 
