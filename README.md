@@ -18,11 +18,11 @@ Available from [Kaggle.com](https://www.kaggle.com)
 
 There are 5 CSV files in this data set. 
 
-* 2015.csv
-* 2016.csv
-* 2017.csv
-* 2018.csv
-* 2019.csv
+* [2015.csv](https://www.kaggle.com/unsdsn/world-happiness?select=2015.csv)
+* [2016.csv](https://www.kaggle.com/unsdsn/world-happiness?select=2016.csv)
+* [2017.csv](https://www.kaggle.com/unsdsn/world-happiness?select=2017.csv)
+* [2018.csv](https://www.kaggle.com/unsdsn/world-happiness?select=2018.csv)
+* [2019.csv](https://www.kaggle.com/unsdsn/world-happiness?select=2019.csv)
 
 CSV files are placed in the Project Data folder:
 
@@ -86,24 +86,6 @@ Hover Text = Region and Happiness Score
 
 Selector = Country
 
-----------------------------------------------------------------------------------------------------------------------------
-
-### Data Sources
-We used Kaggle.com to get our data, we used following five SV files for our datasets that we 
-processed and cleaned to get our final dataset.
- 
- https://www.kaggle.com/unsdsn/world-happiness?select=2015.csv
- 
- https://www.kaggle.com/unsdsn/world-happiness?select=2016.csv
-
- https://www.kaggle.com/unsdsn/world-happiness?select=2017.csv
- 
- https://www.kaggle.com/unsdsn/world-happiness?select=2018.csv
- 
- https://www.kaggle.com/unsdsn/world-happiness?select=2019.csv
-
-
- 
 ----------------------------------------------------------------------------------------------------------------------------
 
 ### Task Breakdown
