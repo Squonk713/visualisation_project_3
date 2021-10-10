@@ -10,7 +10,7 @@ def home():
     return render_template("index.html")
 
 @app.route('/data')
-def get_data():
+def get_happiness_data():
     con = psycopg2.connect('postgres://{}:{}@localhost:5432/world_happiness_rank'.format(username, password))  
     print(con)
     cur = con.cursor()
@@ -20,7 +20,7 @@ def get_data():
     return jsonify(data)
 
 @app.route('/mean_data')
-def send_data():
+def get_happniness_mean_vals_data():
     con = psycopg2.connect('postgres://{}:{}@localhost:5432/world_happiness_rank'.format(username, password))  
     print(con)
     cur = con.cursor()
