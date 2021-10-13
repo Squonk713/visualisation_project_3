@@ -80,7 +80,7 @@ X Values = GDP per Capita
 
 Y Values = Lifetime Expectancy
 
-Hover Text = Region and Happiness Score
+Hover Text = Country and Happiness Score
 
 Selector = Year
 
