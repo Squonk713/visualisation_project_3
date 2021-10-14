@@ -65,8 +65,8 @@ function barplot(newcountry) {
       console.log(sample_happiness_score);
 
       var bartrace = {
-        x: sample_years,
-        y: sample_happiness_score,
+        x: sample_happiness_score,
+        y: sample_years,
         hoverinfo: sample_happiness_score,
         type: "bar",
         orientation: "h",
