@@ -43,6 +43,11 @@ function CountryChanged(newcountry) {
     barplot(newcountry);
 };
 
+function YearChanged(newyear) {
+  // Fetch new data each time a new sample is selected
+  bubbleplot(newyear);
+};
+
 
 function barplot(newcountry) {
   d3.json("http://127.0.0.1:5000/data").then((data) => {
@@ -104,5 +109,74 @@ function barplot(newcountry) {
 
 }
 )
+}
+;
+
+function bubbleplot(newyear) {
+  d3.json("http://127.0.0.1:5000/data").then((data) => {
+
+      var plotdata_array = data.plotdata;
+      var samples = plotdata_array.filter(object => object.year == newyear);
+
+      console.log(samples);
+      console.log(samples.length);
+
+      sample_region = [];
+      sample_happiness_score = [];
+      sample_gdp_per_capita = [];
+      sample_life_expectancy = [];
+
+
+      for (let i = 0; i < samples.length; i++) {
+        sample_region.push(samples[i].region)
+        sample_happiness_score.push(samples[i].happiness_score)
+        sample_gdp_per_capita.push(samples[i].gdp_per_capita)
+        sample_life_expectancy.push(samples[i].life_expectancy)
+      };
+
+      // Bubble colour = Region
+      // Size of Bubble = Happiness Score
+      // X Values = GDP per Capita
+      // Y Values = Lifetime Expectancy
+      // Hover Text = Region and Happiness Score
+
+
+var bubbletrace = {
+  x: sample_gdp_per_capita,
+  y: sample_life_expectancy,
+  type: "bubble",
+  text: sample_region,sample_happiness_score,
+  hoverinfo: "text",
+  mode: "markers",
+  marker: {size: sample_happiness_score, color: sample_region, colorscale: "Earth"}
+};
+
+data = [bubbletrace];
+
+var bubblelayout = {
+  autosize: true,
+  height: 1000,
+  paper_bgcolor: "rgba(0,0,0,0)",
+  plot_bgcolor: "rgba(0,0,0,0)",
+  yaxis: {
+      title: {
+          text: "<b>Lifetime Expectancy</b>",
+  font: {
+      color: "#f8f8ff",
+      size: 20,
+  }}, color: "#f8f8ff"},
+  xaxis: {title: {
+  text: "<b>GDP per Capita</b>",
+  font: {
+      color: "#f8f8ff",
+      size: 20,
+  }}, color: "#f8f8ff"
+},
+};
+
+Plotly.newPlot("bubble", data, bubblelayout);
+});
+
+
 }
 ;
