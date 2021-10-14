@@ -82,7 +82,7 @@ function barplot(newcountry) {
             },
             xaxis: {title: {
 
-            text: "<b>OTU Count</b>",
+            text: "<b>Happiness Score by Year</b>",
             font: {
                 color: "#f8f8ff",
                 size: 10,
