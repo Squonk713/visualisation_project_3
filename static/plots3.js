@@ -92,8 +92,6 @@ function init() {
                   color: "#f8f8ff",
                   size: 10,
               }},
-                      color: "#f8f8ff",
-                      size: 6,
                   },        margin: {
                       l: 100,
                       r: 35,
