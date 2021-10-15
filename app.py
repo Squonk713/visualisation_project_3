@@ -24,14 +24,20 @@ def get_happiness_data():
     for row in result:
         mylist.append({"country":row[0],"region":row[1],"year":row[2],"overall_rank":row[3],
              "happiness_score":row[4],"gdp_per_capita":row[5],"life_expectancy":(20*row[6])})
-    mydict["year"] = yearlist
     mydict["plotdata"] = mylist
+    mydict["year"] = yearlist
+
+    meanvalues=[]
     cursor.execute("""select * from  global_happiness_mean_values""")
     results = cursor.fetchall()
     for row in results:
+           
         country =row[0]
         countries.append(country)
+        meanvalues.append({"country":row[0],"overall_rank":row[1],
+             "happiness_score":row[2],"gdp_per_capita":row[3],"life_expectancy":row[4]})  
     mydict["countries"]= countries   
+    mydict["meanvalues"]= meanvalues
     return jsonify(mydict) 
 
 
