@@ -1,59 +1,59 @@
-function init() {
+// function init() {
 
-  // load the JSON data from the database
+//   // load the JSON data from the database
   
-      d3.json("http://127.0.0.1:5000/data").then((data) => {
-          console.log(data);
+//       d3.json("http://127.0.0.1:5000/data").then((data) => {
+//           console.log(data);
   
-  // get years and assign to selector 2
+//   // get years and assign to selector 2
   
-          var selector = d3.select("#selDataset2");
-          var years = data.year;
-          console.log(years);
-          years.forEach((year) => {
-            selector
-              .append("option")
-              .text(year)
-              .property("value", year);
-            })
+//           var selector = d3.select("#selDataset2");
+//           var years = data.year;
+//           console.log(years);
+//           years.forEach((year) => {
+//             selector
+//               .append("option")
+//               .text(year)
+//               .property("value", year);
+//             })
   
-  // get countries and assign to selector 1
+//   // get countries and assign to selector 1
   
-          var selector2 = d3.select("#selDataset");
-          var countries = data.countries;
-          console.log(countries);
-          countries.forEach((country) => {
-            selector2
-              .append("option")
-              .text(country)
-              .property("value", country);
-          })
+//           var selector2 = d3.select("#selDataset");
+//           var countries = data.countries;
+//           console.log(countries);
+//           countries.forEach((country) => {
+//             selector2
+//               .append("option")
+//               .text(country)
+//               .property("value", country);
+//           })
   
-  // create plots using values of the first row of data
+//   // create plots using values of the first row of data
   
-  });
-  };
+//   });
+//   };
           
-  init(null);
+//   init(null);
   
   //***** This function plots the bar plot with new data for the selected Country *********************/
   
-  function CountryChanged(newcountry) {
-      // Fetch new data each time a new sample is selected
-      barplot(newcountry);
-  };
+  // function CountryChanged(newcountry) {
+  //     // Fetch new data each time a new sample is selected
+  //     barplot(newcountry);
+  // };
   
-  function YearChanged(newyear) {
-    // Fetch new data each time a new sample is selected
-    bubbleplot(newyear);
-  };
+  // function YearChanged(newyear) {
+  //   // Fetch new data each time a new sample is selected
+  //   bubbleplot(newyear);
+  // };
   
   
-  function barplot(newcountry) {
+  function barplot(country) {
     d3.json("http://127.0.0.1:5000/data").then((data) => {
   
         var plotdata_array = data.plotdata;
-        var samples = plotdata_array.filter(object => object.country == newcountry);
+        var samples = plotdata_array.filter(object => object.country == country);
   
         console.log(samples);
         console.log(samples.length);
@@ -110,11 +110,11 @@ function init() {
   }
   ;
   
-  function bubbleplot(newyear) {
+  function bubbleplot(year) {
     d3.json("http://127.0.0.1:5000/data").then((data) => {
   
         var plotdata_array = data.plotdata;
-        var samples = plotdata_array.filter(object => object.year == newyear);
+        var samples = plotdata_array.filter(object => object.year == year);
   
         console.log(samples);
         console.log(samples.length);
@@ -123,6 +123,7 @@ function init() {
         sample_happiness_score = [];
         sample_gdp_per_capita = [];
         sample_life_expectancy = [];
+        sample_country = [];
   
   
         for (let i = 0; i < samples.length; i++) {
@@ -130,6 +131,20 @@ function init() {
           sample_happiness_score.push(samples[i].happiness_score)
           sample_gdp_per_capita.push(samples[i].gdp_per_capita)
           sample_life_expectancy.push(samples[i].life_expectancy)
+          sample_country.push(samples[i].country)
+        };
+        region_numeric = [];
+        for (let i = 0; i < sample_region.length; i++) {
+          if(sample_region[i] == "Australia and New Zealand") {region_numeric.push(0)}
+          else if (sample_region[i] == "Central and Eastern Europe") {region_numeric.push(1)}
+          else if (sample_region[i] == "Eastern Asia") {region_numeric.push(2)}
+          else if (sample_region[i] == "Latin America and Caribbean") {region_numeric.push(3)}
+          else if (sample_region[i] == "Middle East and Northern Africa") {region_numeric.push(4)}
+          else if (sample_region[i] == "North America") {region_numeric.push(5)}
+          else if (sample_region[i] == "Southeastern Asia") {region_numeric.push(6)}
+          else if (sample_region[i] == "Southern Asia") {region_numeric.push(7)}
+          else if (sample_region[i] == "Sub-Saharan Africa") {region_numeric.push(8)}
+          else if (sample_region[i] == "Western Europe") {region_numeric.push(9)}
         };
   
         // Bubble colour = Region
@@ -141,24 +156,23 @@ function init() {
   
   var bubbletrace = {
     x: sample_gdp_per_capita,
-    y: sample_life_expectancy,
+    y: sample_happiness_score,
     type: "bubble",
-    text: sample_region,sample_happiness_score,
-    hoverinfo: "text",
+    text: sample_region,
+    hoverinfo: "x+y+text",
     mode: "markers",
-    marker: {size: sample_happiness_score, color: sample_region, colorscale: "Earth"}
+    marker: {size: sample_life_expectancy, color: region_numeric}
   };
   
   data = [bubbletrace];
   
   var bubblelayout = {
     autosize: true,
-    height: 1000,
     paper_bgcolor: "rgba(0,0,0,0)",
     plot_bgcolor: "rgba(0,0,0,0)",
     yaxis: {
         title: {
-            text: "<b>Lifetime Expectancy</b>",
+            text: "<b>Happiness Score</b>",
     font: {
         color: "#f8f8ff",
         size: 20,
@@ -178,3 +192,54 @@ function init() {
   
   }
   ;
+  function init() {
+
+    // load the JSON data from the database
+    
+        d3.json("http://127.0.0.1:5000/data").then((data) => {
+            console.log(data);
+    
+    // get years and assign to selector 2
+    
+            var selector = d3.select("#selDataset2");
+            var years = data.year;
+            console.log(years);
+            years.forEach((year) => {
+              selector
+                .append("option")
+                .text(year)
+                .property("value", year);
+              })
+    
+    // get countries and assign to selector 1
+    
+            var selector2 = d3.select("#selDataset");
+            var countries = data.countries;
+            console.log(countries);
+            countries.forEach((country) => {
+              selector2
+                .append("option")
+                .text(country)
+                .property("value", country);
+            })
+    
+    // create plots using values of the first row of data
+    const firstcountries =  countries[0]
+    const firstyear = years[0]
+    barplot(firstcountries)
+    bubbleplot(firstyear)
+    })
+    };
+    //***** This function plots the bar plot with new data for the selected Country *********************/
+  
+  function CountryChanged(newcountry) {
+    // Fetch new data each time a new sample is selected
+    barplot(newcountry);
+  }
+  
+  function YearChanged(newyear) {
+  // Fetch new data each time a new sample is selected
+  bubbleplot(newyear);
+  }
+            
+    init();

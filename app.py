@@ -23,7 +23,7 @@ def get_happiness_data():
     result = cursor.fetchall()
     for row in result:
         mylist.append({"country":row[0],"region":row[1],"year":row[2],"overall_rank":row[3],
-             "happiness_score":row[4],"gdp_per_capita":row[5],"life_expectancy":row[6]})
+             "happiness_score":row[4],"gdp_per_capita":row[5],"life_expectancy":(20*row[6])})
     mydict["year"] = yearlist
     mydict["plotdata"] = mylist
     cursor.execute("""select * from  global_happiness_mean_values""")
