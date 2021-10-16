@@ -9,6 +9,7 @@
 
 * [Dataset](#dataset-header)
 * [Project Outline](#project-header)
+* [Required Setup](#Required-header) 
 * [Presentation](#presentation-header)
 * [Visualisations](#visualisation-header)
 * [Dashboard](#dashboard-header)
@@ -68,6 +69,14 @@ The bubble plot will be used to show lifetime expectancy and GDP contribution to
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+## <a id="Required-header"></a>Required Setup
+
+To run app.py you will need to install the following packages/dependencies::
+* Flask `pip install flask`
+* Psycopg2 `pip install psycopg2`
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## <a id="presentation-header"></a>Presentation
 
