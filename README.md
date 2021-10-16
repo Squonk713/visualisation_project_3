@@ -69,7 +69,7 @@ The plots that have been used to represent the data are Frappe bar plot of mean 
 
 The project presentation can be found in the [/Presentation](Presentation/) directory:
 
-* world_happiness_report.pdf
+* happiness_report.pdf
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
