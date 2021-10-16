@@ -38,9 +38,10 @@ CSV files are placed in the Project Data folder.
 ### Data Cleaning
 
 The first step of data processing involved renaming column headings to formalise across all five datasets. A "Year" column was added for each dataset, as well as a "Region" column in the CSV files that it was missing. The title method was used to formalise all capitalisation for “Country” and “Region” columns across all datasets so they are the same. The Lambda function was applied to assign region values by referencing an existing region column. All five csv’s were then concatenated to form one csv and any country values that did not feature in each of the five datasets were dropped. A second csv was created where our dataset was grouped by country and the mean function applied for use with one of our bar plots.
+
 The two CSV files are located in the Project Data folder:
-• global_happiness_data
-• global_happiness_mean_values
+* global_happiness_data
+* global_happiness_mean_values
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
