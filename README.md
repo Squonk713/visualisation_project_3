@@ -30,7 +30,7 @@ CSV files are placed in the Project Data folder.
 Column headings were renamed to formalise across all five datasets.
 A "Year" column was added for each dataset, as well as a "Region" column in the CSV files that it was missing.
 The title method was used to formalise all capitalisation for “Country” and “Region” columns across all datasets.
-The Lamda function was applied to assign region values by referencing an existing region column.
+The Lambda function was applied to assign region values by referencing an existing region column.
 The five dataframes were then concatenated to form one csv.
 Any country values that did not feature in each of the five datasets were dropped.
 The final CSV was exported for use with our plots. The dataset was grouped by country and the mean function applied. 
@@ -39,59 +39,45 @@ A second CSV file was exported for use with our map visualisations.
 
 ## <a id="project-header"></a>Project Outline
 
-Using the “World Happiness Report” dataset, we will be analysing the relationship between the perceived happiness of a country’s citizens, 
-the country’s GDP, and the average life expectancy.
+Using “The World Happiness Report” dataset, we will be analysing correlation between the GDP per capita and life expectancy contribution towards a country’s overall happiness score. We will also be exploring how happiness score ranges between different world regions, investigating any trends that may be seen. 
 
-	1. The dataset is in five separates .csv files, which we will clean using pandas to drop irrelevant columns and rename in 
+	1. The dataset is in five separate csv files, which we will clean using pandas to drop irrelevant columns and rename in 
      preparation for a database merge.
   
-	2. We will then create SQLite database and create a table to hold the data, which we will query using our Python Flask API.
+	2. The database was created using PostgreSQL, In pgAdmin 4 two tables were created to hold the data and mean value data and was queryed using our Python Flask API.
+
+[<img src="https://wiki.postgresql.org/images/a/a4/PostgreSQL_logo.3colors.svg" align="right"  width="100">](https://www.postgresql.org/)
+
+
   
-	3. The plots that we will use to represent the data are “Choropleth Polygon Map”, “Bubble Plot”, “Bar Charts”.
-  
-	4. The Choropleth map will use a separate dataset, which will be the average of all five years data.
-  
-	5. The plots will be changed using the selector to change the regions.
-  
-	6. The dataset will be changed by selecting the years from the dropdown selector, which will update all plots 
-     with the new data except the map.
-  
-	7. We will be using the JavaScript Library “FusionCharts” for our 3D bar chart to meet the requirement to 
-     use an unknown library for the project
+	3. The plots that have been used to represent the data are Frappe bar plot of mean happiness scores, where we will plot the top 10 countries with the highest happiness scores and the 10 countries with the lowest happiness scores. We also created a bubble plot using the plot.ly package from D3. The bubble plot was used to show lifetime expectancy and GDP contribution towards happiness scores for different countries and also the regions these countries belong to. A plot.ly bar chart was the final plot created to display our data. The chart shows the happiness scores of selected countries for years 2015, 2016, 2017, 2018 and 2019. 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Overview of the Visualization 
 
-#### Choropleth Polygon Map
+#### Frappe Bar Chart
 
-•	The Choropleth map will use a separate dataset, which will be the average of all five years data
- #### Charts and Plots
- 
-The dataset will be changed by selecting the data from the dropdown selector, which will update all plots with the new datas.
+For this bar chart we will use the Frappe package with the mean happiness score data to plot 10 countries with the highest mean happiness score and 10 countries with the lowest happiness score for all five years.
 
-
-#### Bubble Plot
+#### Plotly Bubble Plot
 For the bubble plot we will have
 
 Bubble colour = Region
 
-Size of Bubble = Happiness Score
+Size of Bubble = Life expectancy
 
 X Values = GDP per Capita
 
-Y Values = Lifetime Expectancy
+Y Values = Happiness score
 
 Hover Text = Country and Happiness Score
 
 Selector = Year
 
-#### 3D Bar Charts
-For the bar chart we are planning to use the fusionchart for 3D bar chart with 
+#### Plotly Bar Charts
 
-X Values = Year
+X Values = Happiness Score
 
-Y Values = Happiness Score
-
-Hover Text = Region and Happiness Score
+Y Values = Year
 
 Selector = Country
 
@@ -101,10 +87,10 @@ Selector = Country
 
 1. Data cleaning and processing in Pandas - Jesse
 2. Database creation in SQL – Isha
-3. JavaScript coding for plots – Jessica 
-4. Coding for the choropleth map – Jesse
-5. Rendering the HTML using Flask – Jessica and Isha 
-6. Project Presentation  – All the team members 
+3. JavaScript coding for plots – Isha, Jesse, Jessica 
+4. Rendering the HTML using Flask – Jessica, Isha and Jesse 
+5. Project Presentation – Jessica, Isha, Jesse
+6. Readme file - Jessica
 
 ----------------------------------------------------------------------------------------------------------------------------
 
@@ -113,4 +99,5 @@ Selector = Country
 * [Isha Singh](https://github.com/isha167)
 * [Jesse Edwards](https://github.com/Squonk713)
 * [Jessica Uppal](https://github.com/JessicaUppal)
+
 
