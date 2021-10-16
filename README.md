@@ -16,8 +16,10 @@
 
 ## <a id="dataset-header"></a>Dataset
 
-We used the [World Happiness Report Dataset](https://www.kaggle.com/unsdsn/world-happiness)\
-Available from [Kaggle.com](https://www.kaggle.com)
+For our project we have explored the[World Happiness Report Dataset](https://www.kaggle.com/unsdsn/world-happiness)\
+Available from [Kaggle.com](https://www.kaggle.com). 
+The report reviews the state of happiness around the world and shows how the science of happiness explains personal and national variations in happiness. The report attracts global recognition as governments and organizations often use happiness indicators in decision making.
+The happiness scores found in the dataset use data from the Gallup World Poll, which provides scores based on answers to the main life evaluation question in the poll. The question reflects on the best possible life for them being a 10 on the scale, and the worst possible life being a 0. 
 
 There are 5 CSV files in this data set: 
 
@@ -28,6 +30,8 @@ There are 5 CSV files in this data set:
 * [2019.csv](https://www.kaggle.com/unsdsn/world-happiness?select=2019.csv)
 
 CSV files are placed in the Project Data folder.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### Data Cleaning
 Column headings were renamed to formalise across all five datasets.
