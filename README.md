@@ -57,7 +57,7 @@ The database will be created using PostgreSQL. Two tables will need to be create
 [<img src="https://wiki.postgresql.org/images/a/a4/PostgreSQL_logo.3colors.svg" align="right"  width="100">](https://www.postgresql.org/)
 
 For the data visualisations we intend to use the D3 JavaScript plotting library Plotly, to create a bubble plot and bar chart. We will also be using an additional charting package called Frappe Charts to plot a bar chart using the mean happiness scores for different countries.
-The bubble plot will be used to show lifetime expectancy and GDP contribution towards happiness scores for different countries and also the regions these countries belong to. The Plotly bar chart will be used to visualise how happiness scores vary across the years 2015-2019 for seleceted countries.
+The bubble plot will be used to show lifetime expectancy and GDP contribution towards happiness scores for different countries and also the regions these countries belong to. The Plotly bar chart will be used to visualise how happiness scores vary across the years 2015-2019 for seleceted countries. The two plotly plots will be interactive through the use of selector buttons, used to change year and country. 
 
 
 
