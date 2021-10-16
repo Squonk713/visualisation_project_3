@@ -3,10 +3,11 @@
 <head>
   <style>
     body {
-      background-image:url("Images/background_image.JPG");
-      background-size: 1800px 900px;
+      background-image: url("../static/image (1).png");
+      background-size: 1800px 1000px;
          }
     </style>
+ 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -22,24 +23,22 @@
         <p style="color:#0779B2;">Use the interactive charts below to explore the dataset</p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-3">
-        <div class="well">
-          <h5>BAR PLOT: Select Country:</h5>
-          <select id="selDataset" onchange="CountryChanged(this.value)"></select>
-        </br>
-      </br>
-    </br>
-  </br>
-</br>
+    <div class="row" id ="bar-plot">
+      <div class="col-md-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title"><b><font size="4">Happiness Score By Year</font></b></h3>
+          </div>
+          <div class="well">
+            <h5>BAR PLOT: Select Country:</h5>
+            <select id="selDataset" onchange="CountryChanged(this.value)"></select>
+          </div>
+          <div id="bar" style=background-color:#141414></div>
         </div>
-      </div>
-      <div class="col-md-9">
-        <div id="bar"></div>
-      </div>
-    </div>
-  </br>
-</br>
+        </div>
+          </div>
+  
+
     <div class="row" id="bubble-row">
       <div class="col-md-12">
       <div class="panel panel-primary">

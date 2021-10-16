@@ -59,19 +59,19 @@ function init() {
         };
         bardata = [bartrace];
         var barlayout = {
-            height: 200,
+            height: 250,
             width: 800,
                 yaxis: {                        
-              color: "#0779B2",
+              color: "#F8F8FF",
               size: 8,
               },
               xaxis: {title: {
               text: "<b>Happiness Score by Year</b>",
               font: {
-                  color: "#0779B2",
+                  color: "#F8F8FF",
                   size: 20,
               }},
-                      color: "#0779B2",
+                      color: "#F8F8FF",
                       size: 6,
                   },        margin: {
                       l: 100,
@@ -80,8 +80,8 @@ function init() {
                       t: 5,
                       pad: 4
                     },    
-          paper_bgcolor: "rgba(0,0,0,0)",
-          plot_bgcolor: "rgba(0,0,0,0)",
+          paper_bgcolor: "#000000",
+          plot_bgcolor: "#000000",
         };
         Plotly.newPlot("bar", bardata, barlayout);
   }
@@ -157,7 +157,7 @@ function init() {
         size: 20,
     }}, color: "#F8F8FF"},
     xaxis: {title: {
-    text: "<b>GDP per Capita</b>",
+    text: "<b>GDP per Capita(extent of contribution)</b>",
     font: {
         color: "#F8F8FF",
         size: 20,
@@ -168,10 +168,14 @@ function init() {
   });
   }
   ;
+  //function for the chart using frappe library
   function chartplot() {
     d3.json("http://127.0.0.1:5000/data").then((data) => {
       var meanvalues_array = data.meanvalues;
       var samples = meanvalues_array;
+      samples.sort(function (a, b) {
+        return a.happiness_score - b.happiness_score;
+      });
         console.log(samples);
         sample_countries = [];
         sample_happiness_score = [];
@@ -200,5 +204,5 @@ function init() {
       formatTooltipY: d => d + ' pts',
     }
     });
-    chart.export();
+    //chart.export();
   }})};
