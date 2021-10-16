@@ -9,6 +9,7 @@
 
 * [Dataset](#dataset-header)
 * [Project Outline](#project-header)
+* [Presentation](#presentation-header)
 * [Visualisations](#visualisation-header)
 * [Dashboard](#dashboard-header)
 * [Collaborators](#team-header)
@@ -62,6 +63,16 @@ The plots that have been used to represent the data are Frappe bar plot of mean 
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+## <a id="presentation-header"></a>Presentation
+
+The project presentation can be found in the [/Presentation](Presentation/) directory:
+
+* world_happiness_report.pdf
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## <a id="visualisation-header"></a>Visualisations
 
