@@ -1,7 +1,7 @@
 ﻿## World Happiness Report- An Analysis 
 
 
-![Title Image](Images/README_image.jpg)
+![Title Image](Images/repository_image.png)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
