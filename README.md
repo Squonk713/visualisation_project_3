@@ -51,16 +51,20 @@ The two CSV files are located in the Project Data folder:
 Using “The World Happiness Report” dataset, we will be analysing the correlation between the GDP per capita and life expectancy contribution towards a country’s overall happiness score. We will also be exploring how happiness score ranges between different world regions, investigating any trends that may be seen. 
 
 The dataset is in five separate csv files, which we will clean using pandas to drop irrelevant columns and rename in preparation for a database merge.
+
+[<img src="https://wiki.postgresql.org/images/a/a4/PostgreSQL_logo.3colors.svg" align="right"  width="100">](https://www.postgresql.org/)
   
 The database will be created using PostgreSQL. Two tables will need to be created to hold the data from the two seperate CSV's and will need to be queryed using our Python Flask API.
 
-[<img src="https://wiki.postgresql.org/images/a/a4/PostgreSQL_logo.3colors.svg" align="right"  width="100">](https://www.postgresql.org/)
 
 For the data visualisations we intend to use the D3 JavaScript plotting library Plotly, to create a bubble plot and bar chart. We will also be using an additional charting package called Frappe Charts to plot a bar chart using the mean happiness scores for different countries.
 The bubble plot will be used to show lifetime expectancy and GDP contribution towards happiness scores for different countries and also the regions these countries belong to. The Plotly bar chart will be used to visualise how happiness scores vary across the years 2015-2019 for seleceted countries. The two plotly plots will be interactive through the use of selector buttons, used to change year and country. 
 
 
+
 <a href="https://plotly.com/javascript/"><img src="https://images.plot.ly/logo/plotlyjs-logo@2x.png" align="right" height="50"></a>
+
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -80,39 +84,19 @@ The project presentation can be found in the [/Presentation](Presentation/) dire
 
 ![Frappe Image](Images/frappe_bar_chart.JPG)
 
-
-For this bar chart we will use Frappe Charts a SVG Chart component with the mean happiness score data to plot 10 countries with the highest mean happiness score and 10 countries with the lowest happiness score for all five years.
+Frappe Charts a SVG Chart component was used to create the bar chart. Mean happiness score was used to plot the 10 countries with the highest mean happiness score and 10 countries with the lowest happiness score for all five years.
 
 #### Plotly Bubble Plot
 
 ![Bubble Image](Images/plotly_bubble.JPG)
 
-
-For the bubble plot we will have
-
-Bubble colour = Region
-
-Size of Bubble = Life expectancy
-
-X Values = GDP per Capita
-
-Y Values = Happiness score
-
-Hover Text = Country and Happiness Score
-
-Selector = Year
+The interactive bubble plot was created using Plotly and Javascript. The hover text shows happiness score, country name and GDP per Capita value. The colour of the bubble corresponds to the country's region e.g. Western Europe and Southern Asia. The bubble size corresponds to the lifetime expectancy contribution to happiness score and the bubble plot can be changed on "Year" using the selector button.
 
 #### Plotly Bar Charts
 
 ![Bar Image](Images/plotly_bar.png)
 
-
-X Values = Happiness Score
-
-Y Values = Year
-
-Selector = Country
-
+The interactive bar plot was created using Plotly and Javascript. The hover text shows happiness score for the country over the years included in this dataset (2015-2019). The plot can be changed using the "Country" selector button, which includes 141 countries.
 
 
 
