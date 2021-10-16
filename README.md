@@ -8,6 +8,7 @@
 
 * [Dataset](#dataset-header)
 * [Project Outline](#project-header)
+* [Visualisations] (#visualisation-header)
 * [Collaborators](#team-header)
 
 
@@ -41,18 +42,17 @@ A second CSV file was exported for use with our map visualisations.
 
 Using “The World Happiness Report” dataset, we will be analysing correlation between the GDP per capita and life expectancy contribution towards a country’s overall happiness score. We will also be exploring how happiness score ranges between different world regions, investigating any trends that may be seen. 
 
-	1. The dataset is in five separate csv files, which we will clean using pandas to drop irrelevant columns and rename in 
-     preparation for a database merge.
+The dataset is in five separate csv files, which we will clean using pandas to drop irrelevant columns and rename in preparation for a database merge.
   
-	2. The database was created using PostgreSQL, In pgAdmin 4 two tables were created to hold the data and mean value data and was queryed using our Python Flask API.
+The database was created using PostgreSQL, In pgAdmin 4 two tables were created to hold the data and mean value data and was queryed using our Python Flask API.
 
 [<img src="https://wiki.postgresql.org/images/a/a4/PostgreSQL_logo.3colors.svg" align="right"  width="100">](https://www.postgresql.org/)
 
 
-  
-	3. The plots that have been used to represent the data are Frappe bar plot of mean happiness scores, where we will plot the top 10 countries with the highest happiness scores and the 10 countries with the lowest happiness scores. We also created a bubble plot using the plot.ly package from D3. The bubble plot was used to show lifetime expectancy and GDP contribution towards happiness scores for different countries and also the regions these countries belong to. A plot.ly bar chart was the final plot created to display our data. The chart shows the happiness scores of selected countries for years 2015, 2016, 2017, 2018 and 2019. 
+The plots that have been used to represent the data are Frappe bar plot of mean happiness scores, where we will plot the top 10 countries with the highest happiness scores and the 10 countries with the lowest happiness scores. We also created a bubble plot using the plot.ly package from D3. The bubble plot was used to show lifetime expectancy and GDP contribution towards happiness scores for different countries and also the regions these countries belong to. A plot.ly bar chart was the final plot created to display our data. The chart shows the happiness scores of selected countries for years 2015, 2016, 2017, 2018 and 2019. 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-### Overview of the Visualization 
+
+## <a id="visualisation-header"></a>Visualisations
 
 #### Frappe Bar Chart
 
