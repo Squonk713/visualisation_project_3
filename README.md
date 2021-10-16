@@ -60,7 +60,7 @@ For the data visualisations we intend to use the D3 JavaScript plotting library 
 The bubble plot will be used to show lifetime expectancy and GDP contribution towards happiness scores for different countries and also the regions these countries belong to. The Plotly bar chart will be used to visualise how happiness scores vary across the years 2015-2019 for seleceted countries. The two plotly plots will be interactive through the use of selector buttons, used to change year and country. 
 
 
-<a href="https://plotly.com/javascript/"><img src="https://images.plot.ly/logo/plotlyjs-logo@2x.png" height="70"></a>
+<a href="https://plotly.com/javascript/"><img src="https://images.plot.ly/logo/plotlyjs-logo@2x.png" align="right" height="50"></a>
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
