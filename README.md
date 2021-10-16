@@ -81,7 +81,7 @@ The project presentation can be found in the [/Presentation](Presentation/) dire
 ![Frappe Image](Images/frappe_bar_chart.JPG)
 
 
-For this bar chart we will use the Frappe package with the mean happiness score data to plot 10 countries with the highest mean happiness score and 10 countries with the lowest happiness score for all five years.
+For this bar chart we will use Frappe Charts a SVG Chart component with the mean happiness score data to plot 10 countries with the highest mean happiness score and 10 countries with the lowest happiness score for all five years.
 
 #### Plotly Bubble Plot
 
@@ -114,6 +114,12 @@ Y Values = Year
 Selector = Country
 
 
+
+<a href="https://plotly.com/javascript/"><img src="https://images.plot.ly/logo/plotlyjs-logo@2x.png" height="70"></a>
+
+[![npm version](https://badge.fury.io/js/plotly.js.svg)](https://badge.fury.io/js/plotly.js)
+[![circle ci](https://circleci.com/gh/plotly/plotly.js.png?&style=shield&circle-token=1f42a03b242bd969756fc3e53ede204af9b507c0)](https://circleci.com/gh/plotly/plotly.js)
+[![MIT License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://github.com/plotly/plotly.js/blob/master/LICENSE)
 ----------------------------------------------------------------------------------------------------------------------------
 
 
